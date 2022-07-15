@@ -6,24 +6,34 @@ This repository contains our implementation of the Ecumenical tableaux for class
 
 ## Basic notions
 
-Two types of nodes:
+Two special types of nodes:
 
-1. [Special $\alpha$] Ignore every $F$-signed of its list of predecessors. Is the case of $F_i$ negation and $F_i$ implication.
+1. [Special $\alpha$] Ignore every $F$-signed node of its list of predecessors. Is the case of $F_i$ negation and $F_i$ implication.
 2. [Special $\beta$] Create checkpoints. Is the case of $F_i$ disjunction.
 
 ### Checkpoint
 
-A checkpoint is a record of the tree with a index which indicates the moment it was created.
+```
+Inductive checkpoint : Type :=
+| null
+| Checkpoint : Z -> tree -> checkpoint.
+```
+
+A checkpoint is a record of some tree equipped with a index. This index indicates the location of the respective special $\beta$ node in the tree.
 
 ### State
+    
+```
+Inductive state : Type := State : tree -> list checkpoint -> bool -> state.
+```
 
-A state is a complete tree and a list of checkpoints.
+A state is a complete tree plus a list of checkpoints. The boolean is a signal.
 
 ### Controller 
 
-The controller is the central component of the implementation. It is responsible for the following:
+The [controller](https://github.com/renatoleme/TEpci_Coq/blob/028359f486b9df7e33fea88afa169e204147fdc8/Ecumenical.v#L542) is the central method of the implementation. It is responsible for the following:
 
-* It consumes a list of checkpoints; and
+* Consume a list of checkpoints; and
 * Create a new list of states according to the expansion.
 
 The algorithm stops when there is no more checkpoints to consume.
