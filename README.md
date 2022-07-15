@@ -19,7 +19,7 @@ Inductive checkpoint : Type :=
 | Checkpoint : Z -> tree -> checkpoint.
 ```
 
-A checkpoint is a record of some tree equipped with a index ($i$). This record is a capture of the moment where the rule was applied and the index indicates the location of the respective special $\beta$ node in the tree. The trivial checkpoint is the initial tree with $i=0$.
+A checkpoint is a record of some tree equipped with an index ($i$). This record is a capture of the moment when the rule was applied and the index indicates the location of the respective special $\beta$ node in the tree. The trivial checkpoint is the initial tree with $i=0$.
 
 ### State
     
@@ -36,7 +36,7 @@ The [controller](https://github.com/renatoleme/TEpci_Coq/blob/028359f486b9df7e33
 * Consume a list of checkpoints; and
 * Create a new list of states according to the expansion.
 
-The algorithm starts with the trivial checkpoint and stops when there is no more checkpoints to consume.
+The algorithm starts with the trivial checkpoint and stops when there are no more checkpoints to consume.
 
 # Closure 
 
