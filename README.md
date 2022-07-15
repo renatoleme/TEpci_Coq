@@ -8,8 +8,8 @@ This repository contains our implementation of the Ecumenical tableaux for class
 
 Two special types of nodes:
 
-1. **Special $\alpha$** : Ignore every $F$-signed node of its list of predecessors. Is the case of $F_i$ negation and $F_i$ implication.
-2. **Special $\beta$** : Create checkpoints. Is the case of $F_i$ disjunction.
+1. **Special $\alpha$**: branch modulo $F$-signed nodes. Is the case of $F_i$ negation and $F_i$ implication.
+2. **Special $\beta$**: create checkpoints. Is the case of $F_i$ disjunction.
 
 ### Checkpoint
 
@@ -19,7 +19,7 @@ Inductive checkpoint : Type :=
 | Checkpoint : Z -> tree -> checkpoint.
 ```
 
-A checkpoint is a record of some tree equipped with a index. This index indicates the location of the respective special $\beta$ node in the tree.
+A checkpoint is a record of some tree equipped with a index ($i$). This index indicates the location of the respective special $\beta$ node in the tree. The trivial checkpoint is the initial tree with $i=0$.
 
 ### State
     
@@ -36,7 +36,7 @@ The [controller](https://github.com/renatoleme/TEpci_Coq/blob/028359f486b9df7e33
 * Consume a list of checkpoints; and
 * Create a new list of states according to the expansion.
 
-The algorithm stops when there is no more checkpoints to consume.
+The algorithm starts with the trivial checkpoint and stops when there is no more checkpoints to consume.
 
 # Closure 
 
