@@ -4,23 +4,22 @@ In _On the unity of logic_, J.-Y. Girard asks whether is it possible to handle t
 
 This repository contains our implementation of the Ecumenical tableaux for classical and intuitionistic propositional logic on Coq. The system is described in [1].
 
-## Special $\alpha$
+## Basic notions
 
-Special $\alpha$ nodes hide every $F$-signed of its list of predecessors. Is the case of $F_i$ negation and $F_i$ implication.
+Two types of nodes:
 
-## Special $\beta$
+1. [Special $\alpha$] Ignore every $F$-signed of its list of predecessors. Is the case of $F_i$ negation and $F_i$ implication.
+2. [Special $\beta$] Create checkpoints. Is the case of $F_i$ disjunction.
 
-Special $\beta$ nodes create checkpoints. Is the case of $F_i$ disjunction.
-
-## Checkpoint
+### Checkpoint
 
 A checkpoint is a record of the tree with a index which indicates the moment it was created.
 
-## State
+### State
 
 A state is a complete tree and a list of checkpoints.
 
-## Controller 
+### Controller 
 
 The controller is the central component of the implementation. It is responsible for the following:
 
@@ -31,7 +30,7 @@ The algorithm stops when there is no more checkpoints to consume.
 
 # Closure 
 
-A tree $\tau$ is closed $\iff$ $\tau$ contains $F p$ and $T p$ for some atomic $p$ modulo special $\alpha$ nodes. A tableau is a list of trees.  A tableau is considered closed iff some tree is closed.
+A tree $\tau$ is closed iff $\tau$ contains $F p$ and $T p$ for some atomic $p$ modulo special $\alpha$ nodes. A tableau is a list of trees.  A tableau is considered closed iff some tree is closed.
 
 # Examples
 
