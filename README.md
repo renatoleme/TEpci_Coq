@@ -33,6 +33,33 @@ The algorithm stops when there is no more checkpoints to consume.
 
 A tree $\tau$ is closed $\iff$ $\tau$ contains $F p$ and $T p$ for some atomic $p$ modulo special $\alpha$ nodes. A tableau is a list of trees.  A tableau is considered closed iff some tree is closed.
 
+# Examples
+
+```
+(** P /\ Q |- P **)
+Definition inf0 := makeInitialTree
+                       Root (((Node true ([P] /\ [Q])))
+                               ::((Node false ([P])))
+                               ::nil).
+Compute closure inf0.
+```
+```
+(** P, P ->i Q |- Q **)
+Definition inf2 := makeInitialTree
+                       Root (((Node true ([P] ->i [Q])))
+                               ::((Node true ([P])))
+                               ::((Node false ([Q])))
+                               ::nil).
+Compute closure inf2.
+```
+```
+(** |/- ((P ->i Q) ->i P) ->i P **)
+Definition inf5 := makeInitialTree
+                       Root (((Node false ((([P] ->i [Q]) ->i [P]) ->i [P])))
+                               ::nil).
+Compute closure inf5.
+```
+
 # References
 
 [1] Leme, R. R., \& Venturi, G., \& Lopes, B. (2022). Coq Formalization of a Tableau for the Classical-Intuitionistic Propositional Fragment of Ecumenical Logic. WBL (forthcoming).
