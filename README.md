@@ -2,15 +2,15 @@
 
 In _On the unity of logic_, J.-Y. Girard asks whether is it possible to handle the well-known distinction between "classical" and "intuitionistic" not through a change of system, but through "a change of formulas." While considering different but related thoughts, Krauss figured that, with the adequated ground, such a system would offer a "constructively valid refinement of classical reasoning.'' Interestingly enough, this pluralist glimpse of paradise would be feasible, according to him, with a simple notational movement "(...) to distinguish between two different kinds of logical operators requires some additional effort. However, this effort is only notational."
 
-This repository contains our implementation of the Ecumenical tableaux for classical and intuitionistic propoositional logic on Coq. The system is described in [1].
+This repository contains our implementation of the Ecumenical tableaux for classical and intuitionistic propositional logic on Coq. The system is described in [1].
 
 ## Special $\alpha$
 
-Special $\alpha$ nodes hide every $F$-signed of its list of predecessors. Is the case of $F$-i_negation and $F$-i_implication.
+Special $\alpha$ nodes hide every $F$-signed of its list of predecessors. Is the case of $F_i$ negation and $F_i$ implication.
 
 ## Special $\beta$
 
-Special $\beta$ nodes create checkpoints. Is the case of $F$-i_disjunction.
+Special $\beta$ nodes create checkpoints. Is the case of $F_i$ disjunction.
 
 ## Checkpoint
 
