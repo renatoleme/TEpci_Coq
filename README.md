@@ -19,7 +19,7 @@ Inductive checkpoint : Type :=
 | Checkpoint : Z -> tree -> checkpoint.
 ```
 
-A checkpoint is a record of some tree equipped with a index ($i$). This index indicates the location of the respective special $\beta$ node in the tree. The trivial checkpoint is the initial tree with $i=0$.
+A checkpoint is a record of some tree equipped with a index ($i$). This record is a capture of the moment where the rule was applied and the index indicates the location of the respective special $\beta$ node in the tree. The trivial checkpoint is the initial tree with $i=0$.
 
 ### State
     
