@@ -1,8 +1,8 @@
 # Ecumenical tableaux
 
-In [1], J.-Y. Girard asks whether is it possible to handle the well-known distinction between "classical" and "intuitionistic" not through a change of system, but through "a change of formulas." While considering different but related thoughts, Krauss figured that, with the adequated ground, such a system would offer a "constructively valid refinement of classical reasoning.'' [2] Interestingly enough, this pluralist glimpse of paradise would be feasible, according to him, with a simple notational movement "(...) to distinguish between two different kinds of logical operators requires some additional effort. However, this effort is only notational."
+In ([1](#references)), J.-Y. Girard asks whether is it possible to handle the well-known distinction between "classical" and "intuitionistic" not through a change of system, but through "a change of formulas." While considering different but related thoughts, Krauss figured that, with the adequated ground, such a system would offer a "constructively valid refinement of classical reasoning.'' ([2](#references)) Interestingly enough, this pluralist glimpse of paradise would be feasible, according to him, with a simple notational movement "(...) to distinguish between two different kinds of logical operators requires some additional effort. However, this effort is only notational."
 
-This repository contains our implementation of the Ecumenical tableaux for classical and intuitionistic propositional logic on Coq ([Ecumenical.v](/Ecumenical.v)). The system is described in [3].
+This repository contains our implementation of the Ecumenical tableaux for classical and intuitionistic propositional logic on Coq ([Ecumenical.v](/Ecumenical.v)). The system is described in ([3](#references)).
 
 ## Basic notions
 
