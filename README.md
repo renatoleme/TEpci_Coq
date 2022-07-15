@@ -40,7 +40,7 @@ The algorithm starts with the trivial checkpoint and stops when there are no mor
 
 # Closure 
 
-A tree is a set of branches. A branch $S$ is closed iff $S$ contains $F p$ and $T p$ for some atomic $p$ modulo special $\alpha$ nodes. This way, a tree is closed whenever every branch is closed. A tableau, by its turn, is a list of trees; and we will say that a tableau is closed iff some tree of it is closed. The [closure]([/Ecumenical.v#L542](https://github.com/renatoleme/TEpci_Coq/blob/682df55f182e7cc682c7e78db0f8da0bf575c2f9/Ecumenical.v#L667)) function evaluate to true iff the tableau is closed.
+A tree is a set of branches. A branch $S$ is closed iff $S$ contains $F p$ and $T p$ for some atomic $p$ modulo special $\alpha$ nodes. This way, a tree is closed whenever every branch is closed. A tableau, by its turn, is a list of trees; and we will say that a tableau is closed iff some tree of it is closed. The [closure](https://github.com/renatoleme/TEpci_Coq/blob/ac9b02fee228bde59ea0ad7085996d228eae36b0/Ecumenical.v#L667) function evaluate to true iff the tableau is closed.
 
 # Examples
 
