@@ -6,19 +6,19 @@ This repository contains our implementation of the Ecumenical tableaux for class
 
 ## Special $\alpha$
 
-Special $\alpha$ nodes hide every $F$-signed predecessor. Is the case of $F$-i_negation and $F$-i_implication.
+Special $\alpha$ nodes hide every $F$-signed of its list of predecessors. Is the case of $F$-i_negation and $F$-i_implication.
 
 ## Special $\beta$
 
-Special $\beta$ rule create new trees. Is the case of $F$-i_disjunction.
+Special $\beta$ nodes create checkpoints. Is the case of $F$-i_disjunction.
 
 ## Checkpoint
 
-A checkpoint is a tree with a index which indicates the moment it was created.
+A checkpoint is a record of the tree with a index which indicates the moment it was created.
 
 ## State
 
-A state is a tree and a list of checkpoints.
+A state is a complete tree and a list of checkpoints.
 
 ## Controller 
 
