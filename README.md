@@ -8,8 +8,8 @@ This repository contains our implementation of the Ecumenical tableaux for class
 
 Two special types of nodes:
 
-1. [Special $\alpha$] Ignore every $F$-signed node of its list of predecessors. Is the case of $F_i$ negation and $F_i$ implication.
-2. [Special $\beta$] Create checkpoints. Is the case of $F_i$ disjunction.
+1. **Special $\alpha$** : Ignore every $F$-signed node of its list of predecessors. Is the case of $F_i$ negation and $F_i$ implication.
+2. **Special $\beta$** : Create checkpoints. Is the case of $F_i$ disjunction.
 
 ### Checkpoint
 
